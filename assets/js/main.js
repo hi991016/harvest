@@ -1,5 +1,17 @@
 "use strict";
 
+// ===== change theme when 6:00pm =====
+function refreshTime() {
+  const now = new Date().getHours();
+  // show light theme from 6 am to 6 pm
+  if (now >= 6 && now <= 17) {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+}
+setInterval(refreshTime, 1000);
+
 // ===== appheight =====
 const appHeight = () => {
   const doc = document.documentElement;
