@@ -2,8 +2,8 @@
 ------------------------------------------------------------*/
 $base-width: 1920px;
 
-$main-fonts: "Noto Sans JP", sans-serif;
-$helve-fonts: Helvetica, "Helvetica Neue", Arial, sans-serif;
+$main-fonts: Helvetica, "Helvetica Neue", Arial, sans-serif;
+$noto-fonts: "Noto Sans JP", sans-serif;
 
 //color common
 $main-bg-cl: #fff;
@@ -14,4 +14,16 @@ $gray-cl: #d3d3d3;
 
 :root {
   --app-height: 100vh;
+
+  --main-bg-cl: #fff;
+  --main-text-cl: #000;
+  --black-cl: #000;
+  --white-cl: #fff;
+}
+
+[data-theme="dark"] {
+  --main-bg-cl: #000;
+  --main-text-cl: #fff;
+  --black-cl: #fff;
+  --white-cl: #000;
 }
