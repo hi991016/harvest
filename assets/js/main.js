@@ -10,7 +10,7 @@ const refreshTime = function () {
     document.documentElement.setAttribute("data-theme", "dark");
   }
 };
-setInterval(refreshTime, 1000);
+setInterval(refreshTime, 0);
 
 // ===== add event on multiple element =====
 const addEventOnElements = function (elements, eventType, callback) {
@@ -162,8 +162,27 @@ const stopVideo = function () {
   }
 };
 
+// ===== form =====
+$("#js-checkbox").change(function () {
+  let isCheck = this.checked;
+  if (isCheck) {
+    $(this).addClass("active");
+    $(this).closest(".js-form").find(".js-send").addClass("active");
+  } else {
+    $(this).removeClass("active");
+    $(this).closest(".js-form").find(".js-send").removeClass("active");
+  }
+});
+
+$("#submit_btn").on("click", function (e) {
+  e.preventDefault();
+  $(".js-noti").fadeIn();
+});
+
 // ===== init =====
 const init = () => {
+  // #
+  $("body").fadeIn("slow");
   // # app-height
   appHeight();
   // # lenis
